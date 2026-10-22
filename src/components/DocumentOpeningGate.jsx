@@ -1,0 +1,196 @@
+import React, { useRef, useState, useEffect } from 'react';
+import gsap from 'gsap';
+import { Sparkles, ArrowRight, Music } from 'lucide-react';
+
+export default function DocumentOpeningGate({ onUnlock, onComplete }) {
+  const [isOpening, setIsOpening] = useState(false);
+  const containerRef = useRef(null);
+  const centerContentRef = useRef(null);
+  const triggerBtnRef = useRef(null);
+  const particleCanvasRef = useRef(null);
+  const ambientHaloRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = particleCanvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    const particles = Array.from({ length: 48 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5 + 0.5,
+      alpha: Math.random() * 0.45 + 0.15,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: -Math.random() * 0.3 - 0.12
+    }));
+
+    const render = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 210, 255, ${p.alpha})`;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = '#00d2ff';
+        ctx.fill();
+      });
+      animationFrameId = requestAnimationFrame(render);
+    };
+    render();
+
+    return () => {
+      window.removeEventListener('resize', resize);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  const playChimeSound = () => {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      
+      const freqs = [392.00, 523.25, 659.25, 783.99, 1046.50];
+      freqs.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+        
+        gain.gain.setValueAtTime(0, ctx.currentTime + idx * 0.08);
+        gain.gain.linearRampToValueAtTime(0.14, ctx.currentTime + idx * 0.08 + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + idx * 0.08 + 1.4);
+        
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        
+        osc.start(ctx.currentTime + idx * 0.08);
+        osc.stop(ctx.currentTime + idx * 0.08 + 1.5);
+      });
+    } catch {
+    }
+  };
+
+  const handleOpen = () => {
+    if (isOpening) return;
+    setIsOpening(true);
+
+    if (containerRef.current) {
+      containerRef.current.style.pointerEvents = 'none';
+    }
+
+    playChimeSound();
+
+    if (onUnlock) {
+      onUnlock();
+    }
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        if (onComplete) {
+          onComplete();
+        }
+      }
+    });
+
+    tl.to(triggerBtnRef.current, {
+      scale: 1.15,
+      filter: 'drop-shadow(0 0 50px rgba(0, 210, 255, 1))',
+      duration: 0.35,
+      ease: 'back.out(2)'
+    })
+    .to(centerContentRef.current, {
+      opacity: 0,
+      y: -35,
+      filter: 'blur(20px)',
+      duration: 0.65,
+      ease: 'power2.in'
+    }, '-=0.1')
+    .to(ambientHaloRef.current, {
+      scale: 4,
+      opacity: 0.8,
+      duration: 1.0,
+      ease: 'power2.out'
+    }, '-=0.45')
+    .to(containerRef.current, {
+      opacity: 0,
+      duration: 0.65,
+      ease: 'power2.inOut'
+    }, '-=0.35');
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black select-none overflow-hidden px-6"
+    >
+      <canvas
+        ref={particleCanvasRef}
+        className="absolute inset-0 pointer-events-none z-0"
+      />
+
+      <div
+        ref={ambientHaloRef}
+        className="absolute w-[400px] sm:w-[700px] h-[400px] sm:h-[700px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-[140px] opacity-35"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(0, 210, 255, 0.25) 0%, rgba(0, 112, 243, 0.15) 45%, transparent 75%)'
+        }}
+      />
+
+      <div 
+        ref={centerContentRef} 
+        className="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center text-center py-8"
+      >
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-cyan-400/30 text-cyan-300 text-xs tracking-widest uppercase mb-6 backdrop-blur-md shadow-[0_0_20px_rgba(0,210,255,0.15)]">
+          <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+          <span className="font-display font-semibold text-[11px]">
+            Satu Tahun Bersama
+          </span>
+        </div>
+
+        <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl text-white tracking-[-0.05em] uppercase leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] mb-6">
+          Tri Ayuaningsih
+        </h1>
+
+        <p className="font-sans text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-md mx-auto mb-10">
+          Sebuah persembahan kecil untuk 365 hari penuh cinta, tawa, dan cerita yang telah kita lalui bersama.
+        </p>
+
+        <button
+          ref={triggerBtnRef}
+          onClick={handleOpen}
+          disabled={isOpening}
+          className="group relative inline-flex items-center gap-3.5 px-8 py-4 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-cyan-400/40 hover:border-cyan-300 text-white transition-all duration-300 backdrop-blur-xl shadow-[0_0_25px_rgba(0,112,243,0.35)] hover:shadow-[0_0_45px_rgba(0,210,255,0.7)] hover:scale-105 active:scale-95 cursor-pointer"
+          aria-label="Buka Kenangan 365 Hari"
+        >
+          <div className="absolute inset-0 rounded-full bg-cyan-400/10 blur-md group-hover:bg-cyan-400/25 transition-all" />
+          <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF] animate-pulse relative z-10" />
+          <span className="font-display font-semibold text-xs sm:text-sm tracking-widest uppercase relative z-10">
+            Buka Kenangan
+          </span>
+          <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1.5 transition-transform relative z-10" />
+        </button>
+
+        <div className="flex items-center gap-2 text-xs text-slate-400/80 font-sans mt-5">
+          <Music className="w-3.5 h-3.5 text-cyan-400" />
+          <span>Sentuh tombol untuk memulai musik kenangan</span>
+        </div>
+      </div>
+    </div>
+  );
+}

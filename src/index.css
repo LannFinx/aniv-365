@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-void: #000000;
+  --bg-surface: #040814;
+  --blue-glow-core: #0070F3;
+  --blue-neon: #00D2FF;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 112, 243, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 210, 255, 0.7);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.glow-scrollbar::-webkit-scrollbar {
+  height: 2.5px;
+}
+.glow-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+}
+.glow-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #0070F3 0%, #00D2FF 100%);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.8), 0 0 15px rgba(0, 112, 243, 0.5);
+}
+.glow-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00D2FF;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.perspective-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 112, 243, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 112, 243, 0.12) 1px, transparent 1px);
+  transform: perspective(700px) rotateX(65deg);
+  transform-origin: center top;
+}
+
+.squircle-card {
+  border-radius: 26%;
+  position: relative;
+  will-change: transform, opacity, filter;
+}
+
+.squircle-card::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: 27%;
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.7), rgba(0, 112, 243, 0.3), transparent 65%);
+  z-index: -1;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.squircle-card:hover::before {
+  opacity: 1;
+}
+
+.squircle-card-active {
+  box-shadow: 0 0 35px rgba(0, 112, 243, 0.6), 0 0 60px rgba(0, 210, 255, 0.35);
+  border-color: rgba(0, 210, 255, 0.9) !important;
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 210, 255, 0.6);
+  box-shadow: 0 0 25px rgba(0, 112, 243, 0.5);
+  transform: translateY(-1px);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.envelope-shadow {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 112, 243, 0.35);
+}
+
+.paper-texture {
+  background-color: #fbf9f4;
+  background-image: 
+    radial-gradient(#e5dec9 0.75px, transparent 0.75px),
+    repeating-linear-gradient(transparent, transparent 27px, rgba(180, 160, 130, 0.15) 28px);
+  background-size: 16px 16px, 100% 28px;
+}
+
+.stamp-border {
+  box-shadow: 0 0 0 1px #d6cbb5, 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.paper-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.paper-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.paper-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(180, 160, 130, 0.5);
+  border-radius: 4px;
+}
+.paper-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 120, 90, 0.7);
+}
+
