@@ -52,7 +52,7 @@ export default function FinaleSection({ finaleSectionRef }) {
                 Tri & Ahnaf
               </span>
               <span className="text-xs text-cyan-300 font-display font-medium tracking-wider">
-                20.10.2025 — ∞
+                25.10.2025 — ∞
               </span>
             </div>
           </div>

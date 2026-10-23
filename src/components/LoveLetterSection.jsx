@@ -26,11 +26,11 @@ export default function LoveLetterSection({ letterSectionRef }) {
   }, [isOpen]);
 
   return (
-    <section 
-      ref={letterSectionRef} 
+    <section
+      ref={letterSectionRef}
       className="w-full h-screen relative flex flex-col items-center justify-center px-4 overflow-hidden bg-transparent select-none"
     >
-      <div 
+      <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[620px] md:w-[880px] h-[280px] sm:h-[620px] md:h-[880px] pointer-events-none rounded-full"
         style={{
           background: 'radial-gradient(circle at center, rgba(0, 112, 243, 0.16) 0%, rgba(0, 210, 255, 0.04) 40%, transparent 70%)',
@@ -58,7 +58,7 @@ export default function LoveLetterSection({ letterSectionRef }) {
           </span>
         </div>
         <div className="font-display text-white/40 text-xs tracking-widest">
-          20.10.2026
+          25.10.2026
         </div>
       </div>
 
@@ -70,13 +70,12 @@ export default function LoveLetterSection({ letterSectionRef }) {
         </div>
 
         <div className="letter-envelope-stage relative w-full flex flex-col items-center justify-center min-h-[260px] sm:min-h-[300px]">
-          <div 
+          <div
             onClick={() => !isOpen && setIsOpen(true)}
-            className={`letter-envelope-card w-[310px] sm:w-[460px] h-[210px] sm:h-[260px] relative rounded-3xl p-6 sm:p-8 bg-[#050811]/95 border transition-all duration-700 ease-out flex flex-col justify-between overflow-hidden cursor-pointer group ${
-              isOpen 
-                ? 'translate-y-16 scale-95 opacity-80 border-cyan-400/40' 
+            className={`letter-envelope-card w-[310px] sm:w-[460px] h-[210px] sm:h-[260px] relative rounded-3xl p-6 sm:p-8 bg-[#050811]/95 border transition-all duration-700 ease-out flex flex-col justify-between overflow-hidden cursor-pointer group ${isOpen
+                ? 'translate-y-16 scale-95 opacity-80 border-cyan-400/40'
                 : 'border-white/15 hover:border-cyan-400/60 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_40px_rgba(0,112,243,0.25)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(0,210,255,0.35)] hover:scale-[1.02]'
-            }`}
+              }`}
           >
             <div className="absolute top-0 right-0 w-44 h-44 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-400/20 transition-all duration-500" />
             <div className="absolute bottom-0 left-0 w-44 h-44 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -87,7 +86,7 @@ export default function LoveLetterSection({ letterSectionRef }) {
               </div>
 
               <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-display font-medium text-white/50 tracking-wider">
-                20.10.2025 — 2026
+                25.10.2025 — 25.10.2026
               </div>
             </div>
 
@@ -119,11 +118,11 @@ export default function LoveLetterSection({ letterSectionRef }) {
       </div>
 
       {isOpen && (
-        <div 
+        <div
           onClick={() => setIsOpen(false)}
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-xl transition-all duration-500 animate-fade-in"
         >
-          <div 
+          <div
             onClick={(e) => e.stopPropagation()}
             data-lenis-prevent
             className="w-full max-w-[560px] max-h-[88vh] rounded-3xl bg-[#050811]/95 text-white border border-cyan-400/40 shadow-[0_30px_90px_rgba(0,0,0,0.98),0_0_60px_rgba(0,112,243,0.3)] flex flex-col relative transition-all duration-500 ease-out overflow-hidden"
@@ -133,7 +132,7 @@ export default function LoveLetterSection({ letterSectionRef }) {
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
                   <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-cyan-300">
-                    Jakarta · 20 Oktober 2026
+                    Banjarbaru · 25 Oktober 2026
                   </span>
                 </div>
                 <h3 className="font-display font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">
@@ -144,9 +143,9 @@ export default function LoveLetterSection({ letterSectionRef }) {
               <div className="flex items-center gap-3">
                 <div className="relative flex-shrink-0">
                   <div className="w-[66px] h-[82px] sm:w-[74px] sm:h-[92px] rounded-xl bg-black/60 border border-cyan-400/50 p-1 rotate-2 shadow-lg overflow-hidden relative group">
-                    <img 
-                      src="/assets/tri/senyum_hoodie.webp" 
-                      alt="Tri Ayuaningsih" 
+                    <img
+                      src="/assets/tri/senyum_hoodie.webp"
+                      alt="Tri Ayuaningsih"
                       decoding="async"
                       className="w-full h-full object-cover rounded-lg"
                     />
@@ -164,7 +163,7 @@ export default function LoveLetterSection({ letterSectionRef }) {
               </div>
             </div>
 
-            <div 
+            <div
               data-lenis-prevent
               className="p-5 sm:p-7 py-5 overflow-y-auto paper-scrollbar space-y-4 text-slate-300 text-xs sm:text-sm leading-relaxed font-sans font-light"
             >
@@ -172,13 +171,19 @@ export default function LoveLetterSection({ letterSectionRef }) {
                 Hai Tri Ayuaningsih,
               </div>
               <p>
-                Terima kasih banyak sudah hadir dan memilih melangkah sejauh ini bersamaku. Tiga ratus enam puluh lima hari mungkin terdengar seperti hitungan yang cepat, tapi di setiap harinya selalu tersimpan jutaan tawa, obrolan kecil kita, dan rasa syukur yang begitu dalam karena memilikimu di sisiku.
+                Terima kasih banyak sudah hadir dan memilih melangkah sejauh ini sama akuu. 360 hari mungkin terdengar seperti hitungan yang cepatt banget, tapi di setiap hari yang aku lewati selalu terbayang di hati aku senyum dan tawamu yang begitu dalam karena aku punya kamu di sisi aku.
               </p>
               <p>
-                Terima kasih sudah selalu menjadi pendengar yang paling sabar, menjadi teman jalan malam yang selalu menghangatkan suasana, dan menjadi alasan terbesar kenapa aku selalu merasa tenang setiap kali memikirkan masa depan. Bersamamu, hal-hal sederhana berubah menjadi kenangan yang tak ternilai.
+                Terima kasih sudah mau milih aku menjadi pasangan kamu, menjadi teman cerita kamu, dan menjadi alasan dan motivasi terbesar aku selalu setiap kali aku melangkah maju untuk terus berkambang. sama kamu, hal sederhana berubah jadi kenangan yang sangat indah di hidup aku.
               </p>
               <p>
-                Website ini kubuat dengan sepenuh hati, merangkai setiap foto dan detik perjalanan kita. Aku ingin kamu tahu bahwa caraku mencintaimu selalu penuh dengan kesungguhan dan ketulusan.
+                Aku selalu bangga sama kamu, ngeliat kamu di titik ini sekarang aku terharu karena aku bisa ikut andil dalam perkembangan kamu selama ini, walaupun aku gabisa disana buat jadi tempat kamu bersandar ketika kamu lelah
+              </p>
+              <p>
+                Aku harap semua perjalanan kamu selalu dimudahkan dan diberikan kesuksesan. aku harap disaat kamu menyentuh titik tertinggi dari mimpi kamu, kamu selalu ingat aku yang selalu mendukung dan mendoakan kamu dari kejauhan
+              </p>
+              <p>
+                Website ini kubangun untuk kita, dengan merangkai setiap potret dan detik yang pernah kita lewati. Lewat bait dan gambar, aku mau kamu tau bahwa aku beneran tulus dan sayang banget sama kamu
               </p>
               <div className="p-4 rounded-2xl bg-cyan-950/30 border border-cyan-400/30 shadow-[0_0_30px_rgba(0,210,255,0.1)] text-cyan-100 text-xs sm:text-sm leading-relaxed font-sans">
                 "Semoga di tahun-tahun berikutnya, tangan kita akan selalu saling bertaut erat, melewati suka dan duka bersama, dengan senyum manis yang sama seperti saat pertama kali aku jatuh hati padamu."

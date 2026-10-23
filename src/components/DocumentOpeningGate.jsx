@@ -158,7 +158,7 @@ export default function DocumentOpeningGate({ onUnlock, onComplete }) {
         <div className="flex items-center gap-2 mb-6 sm:mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
           <span className="font-display font-medium text-white/50 text-xs sm:text-sm tracking-widest uppercase">
-            20.10.2025 — 20.10.2026
+            25.10.2025 — 25.10.2026
           </span>
         </div>
 

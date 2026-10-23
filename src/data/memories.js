@@ -1,48 +1,55 @@
 export const JOURNEY_CHAPTERS = [
   {
     id: 'ch1',
-    period: 'November 2025',
-    title: 'Hari Pertama Bicara',
-    story: 'Bermula dari tatapan tak sengaja dan rasa canggung yang perlahan mencair menjadi senyum paling ramah yang pernah kutemui.',
-    img: '/assets/tri/fotobareng.webp'
+    period: '16 September 2025',
+    title: 'Foto "Bareng" Pertama',
+    story: 'Foto pertama kita sebelum saling dekat, wkwkw disini aku beneran ga expect kalau kita bakal bareng dimasa yang akan datang.',
+    img: '/assets/tri/fotopertama.webp'
   },
   {
     id: 'ch2',
-    period: 'Januari 2026',
-    title: 'Jalan Malam & Cerita',
-    story: 'Menembus dinginnya angin kota berdua, menertawakan hal-hal kecil hingga larut malam tanpa pernah merasa kehabisan kata.',
-    img: '/assets/tri/mobil.webp'
+    period: '05 Oktober 2025',
+    title: 'Insiden yang bikin kita dekat',
+    story: 'dari kamu yang tiba" nelpon dan chat aku "kecela", aku langsung gercep ambil kunci dan pergi ke lokasi kamu. mulai dari situ kita jadi deket dan bekalin kamu telur dan susuu',
+    img: '/assets/tri/kecelakaan.webp'
   },
   {
     id: 'ch3',
-    period: 'Mei 2026',
-    title: 'Menemukan Rumah',
-    story: 'Ketika hari terasa berat dan dunia terasa bising, hanya dengan melihat senyummu segalanya kembali tenang dan terasa utuh.',
-    img: '/assets/tri/senyum_hoodie.webp'
+    period: '23 Oktober 2025',
+    title: '"Confess"',
+    story: 'HAHAHAHA, ini setelah confess pertama kali nya aku ke kamuu. lucu banget dah kita sama" canggung dan akhirnya ketawa terus.',
+    img: '/assets/tri/mobil.webp'
   },
   {
     id: 'ch4',
-    period: '20 Oktober 2026',
-    title: 'Genap Satu Tahun',
-    story: '365 hari telah terlewati penuh warna. Dan jika waktu diulang kembali, aku akan tetap memilihmu berulang kali.',
-    img: '/assets/tri/wisudasmk1.webp'
+    period: '02 Desember 2026',
+    title: 'photobooth pertama',
+    story: 'dan akhirnya kita photobooth dengan segala drama cari waktunyaa xixixi.',
+    img: '/assets/tri/tai.webp'
+  },
+  {
+    id: 'ch5',
+    period: '23 Mei 2026',
+    title: 'Wisuda smk',
+    story: 'Momen wisuda dengan kamu, dengan segala usaha kamu akhirnya aku bisa liat kamu maju ke panggung dan dapat penghargaan TOP 2 di jurusan kitaa xixixi.',
+    img: '/assets/tri/wisudasmk2.webp'
   }
 ];
 
 export const ARC_MEMORIES = [
-  { id: 1, title: 'Satu Tahun Bersama', tag: 'Okt 2025', desc: 'Merayakan 365 hari pertama dan mengawali babak baru penuh cinta.', img: '/assets/tri/wisudasmk1.webp' },
-  { id: 2, title: 'Jalan Sore Berdua', tag: 'Nov 2025', desc: 'Menikmati angin sore dan obrolan hangat tanpa terburu-buru.', img: '/assets/tri/fotobareng.webp' },
-  { id: 3, title: 'Tutup Tahun', tag: 'Des 2025', desc: 'Bersyukur karena kamu masih orang yang sama di sisiku.', img: '/assets/tri/photoboothlucu1.webp' },
-  { id: 4, title: 'Awal Tahun Baru', tag: 'Jan 2026', desc: 'Menulis resolusi dan harapan baru untuk terus saling menjaga.', img: '/assets/tri/mobil.webp' },
-  { id: 5, title: 'Bulan Penuh Hangat', tag: 'Feb 2026', desc: 'Kehadiranmu yang selalu menenangkan di setiap hari.', img: '/assets/tri/senyum_hoodie.webp' },
-  { id: 6, title: 'Tawa Lepas', tag: 'Mar 2026', desc: 'Momen santai menertawakan hal konyol bersama.', img: '/assets/tri/sendirilucu.webp' },
-  { id: 7, title: 'Langkah & Harapan', tag: 'Apr 2026', desc: 'Saling mendukung impian dan merayakan setiap pencapaian.', img: '/assets/tri/sicantik1.webp' },
-  { id: 8, title: 'Sudut Kota Baru', tag: 'Mei 2026', desc: 'Menjelajah tempat baru dan mengukir memori berharga.', img: '/assets/tri/fotbar2.webp' },
-  { id: 9, title: 'Pertengahan Tahun', tag: 'Jun 2026', desc: 'Menatap sejauh apa kita melangkah dengan rasa syukur.', img: '/assets/tri/sicantik2.webp' },
-  { id: 10, title: 'Hari Penuh Ceria', tag: 'Jul 2026', desc: 'Kebahagiaan sederhana melihat senyum manismu.', img: '/assets/tri/photoboothlucu4.webp' },
-  { id: 11, title: 'Ruang Teduh Kita', tag: 'Agu 2026', desc: 'Tempat teraman untuk pulang dan menemukan tenang.', img: '/assets/tri/fotobareng1.webp' },
-  { id: 12, title: 'Menjelang Babak Dua', tag: 'Sep 2026', desc: 'Menyambut perayaan dua tahun dengan cinta yang kian matang.', img: '/assets/tri/sicantik3.webp' },
-  { id: 13, title: 'Dua Tahun Abadi', tag: 'Okt 2026', desc: '730 hari bersama dan cintaku padamu kian bertumbuh.', img: '/assets/tri/fotobareng2.webp' },
+  { id: 1, title: 'Sudut Tenang Kita', tag: 'Okt 2025', desc: 'Momen sederhana duduk bersamamu selalu jadi tempat ternyaman untuk pulang.', img: '/assets/tri/koing.webp' },
+  { id: 2, title: 'Senyum Usil Berdua', tag: 'Nov 2025', desc: 'Selalu ada tawa dan ekspresi konyol setiap kali kita ambil foto bareng.', img: '/assets/tri/fotbar2.webp' },
+  { id: 3, title: 'Topi Konyol & Tawa', tag: 'Des 2025', desc: 'Gak pernah jaim kalau udah berdua, selalu ada hal random yang bikin ngakak.', img: '/assets/tri/tai.webp' },
+  { id: 4, title: 'Cilukba Awal Tahun', tag: 'Jan 2026', desc: 'Tangan di depan kamera dan muka jahil yang selalu berhasil bikin hari berwarna.', img: '/assets/tri/januari1.webp' },
+  { id: 5, title: 'Si Kelinci & Melet', tag: 'Feb 2026', desc: 'Kamu dengan bando kelincimu yang gemas, dan aku yang selalu siap diajak seru-seruan.', img: '/assets/tri/photoboothlucu.webp' },
+  { id: 6, title: 'Cantik & Usil', tag: 'Mar 2026', desc: 'Tatap muka gemas dan pose usilmu yang gak pernah gagal bikin jatuh cinta lagi.', img: '/assets/tri/sicantik5.webp' },
+  { id: 7, title: 'Jurus Piringan Hitam', tag: 'Apr 2026', desc: 'Aksi drama terpental dikelilingi vinyl lagu, selalu heboh di setiap photobooth.', img: '/assets/tri/photoboothlucu4.webp' },
+  { id: 8, title: 'Buket Bunga & Bangga', tag: 'Mei 2026', desc: 'Melihatmu tersenyum dengan buket bunga di hari kelulusan adalah bahagiaku.', img: '/assets/tri/wisudasmk4.webp' },
+  { id: 9, title: 'Muka Jelek Favorit', tag: 'Jun 2026', desc: 'Bisa sebebas ini pasang muka konyol bareng kamu adalah bukti kita paling klik.', img: '/assets/tri/juni.webp' },
+  { id: 10, title: 'Manyun Menggemaskan', tag: 'Jul 2026', desc: 'Bahkan saat lagi pasang muka manyun pun kamu tetap orang termanis di mataku.', img: '/assets/tri/sicantik1.webp' },
+  { id: 11, title: 'Tatap Teduh Malam', tag: 'Agu 2026', desc: 'Ketenangan yang kurasakan setiap kali menatap mata indah dan senyum tulusmu.', img: '/assets/tri/agustus.webp' },
+  { id: 12, title: 'Semangat Babak Baru', tag: 'Sep 2026', desc: 'Wajah imut berkacamata yang siap melangkah menyambut fase dan petualangan baru.', img: '/assets/tri/september.webp' },
+  { id: 13, title: 'Menuju Masa Depan', tag: 'Okt 2026', desc: 'Gaya penuh semangatmu yang selalu jadi motivasi untuk terus melangkah beriringan.', img: '/assets/tri/oktober.webp' },
 ];
 
 export const APPRECIATIONS = [
@@ -59,19 +66,19 @@ export const APPRECIATIONS = [
 export const SPOTIFY_TRACKS = [
   {
     id: 's1',
-    title: 'Film Favorit',
-    artist: 'Sheila On 7',
-    src: '/assets/audio/Film Favorit.mp3',
-    img: '/assets/tri/fotbar2.webp',
-    duration: '3:45'
-  },
-  {
-    id: 's2',
     title: 'Cinta Dan Rahasia',
     artist: 'Yura Yunita, Glenn Fredly',
     src: '/assets/audio/Cinta Dan Rahasia.mp3',
     img: '/assets/tri/mobil.webp',
     duration: '4:27'
+  },
+  {
+    id: 's2',
+    title: 'Film Favorit',
+    artist: 'Sheila On 7',
+    src: '/assets/audio/Film Favorit.mp3',
+    img: '/assets/tri/fotbar2.webp',
+    duration: '3:45'
   },
   {
     id: 's3',

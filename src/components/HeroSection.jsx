@@ -31,9 +31,9 @@ export default function HeroSection({ heroRef, heroContentRef }) {
           </div>
 
           <div className="flex items-center gap-2 text-white/40 text-xs tracking-widest font-display">
-            <span>20.10.2025</span>
+            <span>25.10.2025</span>
             <span className="text-cyan-400">·</span>
-            <span>20.10.2026</span>
+            <span>25.10.2026</span>
           </div>
         </div>
 
