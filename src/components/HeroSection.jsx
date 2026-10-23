@@ -30,13 +30,11 @@ export default function HeroSection({ heroRef, heroContentRef }) {
             <span className="font-display font-medium text-white/90 text-sm tracking-wide">Tri & Ahnaf</span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 text-white/40 text-xs tracking-wider">
-            <span>20 Oktober 2024</span>
+          <div className="flex items-center gap-2 text-white/40 text-xs tracking-widest font-display">
+            <span>20.10.2025</span>
             <span className="text-cyan-400">·</span>
-            <span>20 Oktober 2025</span>
+            <span>20.10.2026</span>
           </div>
-
-          <div className="w-20 sm:w-28" />
         </div>
 
         <div className="relative w-full flex-1 flex items-end justify-center overflow-hidden">
@@ -63,30 +61,22 @@ export default function HeroSection({ heroRef, heroContentRef }) {
         </div>
 
         <div className="w-full max-w-6xl mx-auto flex items-end justify-between z-30 pt-2 pb-1 px-2 sm:px-4">
-          <div className="hero-annotation-left text-left flex flex-col gap-0.5 pointer-events-auto">
-            <span className="text-xs sm:text-sm md:text-base font-semibold text-white tracking-tight drop-shadow">
+          <div className="hero-annotation-left text-left flex items-center gap-2 pointer-events-auto">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_6px_#00D2FF]" />
+            <span className="text-xs sm:text-sm font-display font-medium text-white/90 tracking-wide">
               Satu Tahun Bersama
-            </span>
-            <span className="text-[11px] sm:text-xs text-slate-400 font-normal">
-              20 Oktober 2024 — Selamanya
             </span>
           </div>
 
           <div className="hero-scroll-cue flex flex-col items-center gap-1.5 pointer-events-auto opacity-70 hover:opacity-100 transition-opacity">
-            <span className="text-[10px] sm:text-[11px] text-slate-400 tracking-wider">
-              Scroll ke bawah
-            </span>
             <div className="w-[1px] h-6 bg-white/20 overflow-hidden rounded-full relative">
               <div className="w-full h-2.5 bg-cyan-400 rounded-full animate-[pulse_1.5s_ease-in-out_infinite] shadow-[0_0_8px_#00D2FF]" />
             </div>
           </div>
 
-          <div className="hero-annotation-right text-right flex flex-col gap-0.5 pointer-events-auto">
-            <span className="text-xs sm:text-sm md:text-base font-semibold text-white tracking-tight drop-shadow">
-              Awal Selamanya
-            </span>
-            <span className="text-[11px] sm:text-xs text-slate-400 font-normal">
-              Tri & Ahnaf
+          <div className="hero-annotation-right text-right flex items-center gap-2 pointer-events-auto">
+            <span className="text-xs sm:text-sm font-display font-medium text-slate-400 tracking-wide">
+              Menuju Selamanya
             </span>
           </div>
         </div>

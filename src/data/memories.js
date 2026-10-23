@@ -1,52 +1,48 @@
 export const JOURNEY_CHAPTERS = [
   {
     id: 'ch1',
-    period: 'Bulan Pertama · November 2024',
+    period: 'November 2025',
     title: 'Hari Pertama Bicara',
     story: 'Bermula dari tatapan tak sengaja dan rasa canggung yang perlahan mencair menjadi senyum paling ramah yang pernah kutemui.',
-    img: '/assets/tri/fotobareng.webp',
-    tag: 'The Beginning'
+    img: '/assets/tri/fotobareng.webp'
   },
   {
     id: 'ch2',
-    period: 'Bulan Ketiga · Januari 2025',
+    period: 'Januari 2026',
     title: 'Jalan Malam & Cerita',
     story: 'Menembus dinginnya angin kota berdua, menertawakan hal-hal kecil hingga larut malam tanpa pernah merasa kehabisan kata.',
-    img: '/assets/tri/mobil.webp',
-    tag: 'Midnight Echoes'
+    img: '/assets/tri/mobil.webp'
   },
   {
     id: 'ch3',
-    period: 'Bulan Ketujuh · Mei 2025',
+    period: 'Mei 2026',
     title: 'Menemukan Rumah',
     story: 'Ketika hari terasa berat dan dunia terasa bising, hanya dengan melihat senyummu segalanya kembali tenang dan terasa utuh.',
-    img: '/assets/tri/senyum_hoodie.webp',
-    tag: 'Safe Harbor'
+    img: '/assets/tri/senyum_hoodie.webp'
   },
   {
     id: 'ch4',
-    period: 'Hari ke-365 · Hari Ini',
-    title: 'Genap Satu Tahun Bersamamu',
+    period: '20 Oktober 2026',
+    title: 'Genap Satu Tahun',
     story: '365 hari telah terlewati penuh warna. Dan jika waktu diulang kembali, aku akan tetap memilihmu berulang kali.',
-    img: '/assets/tri/wisudasmk1.webp',
-    tag: 'Endless Horizon'
+    img: '/assets/tri/wisudasmk1.webp'
   }
 ];
 
 export const ARC_MEMORIES = [
-  { id: 1, title: 'Satu Tahun Penuh Cinta', tag: 'Okt 2025', desc: 'Memulai babak baru setelah merayakan 365 hari perjalanan pertama kita bersama.', img: '/assets/tri/wisudasmk1.webp' },
+  { id: 1, title: 'Satu Tahun Bersama', tag: 'Okt 2025', desc: 'Merayakan 365 hari pertama dan mengawali babak baru penuh cinta.', img: '/assets/tri/wisudasmk1.webp' },
   { id: 2, title: 'Jalan Sore Berdua', tag: 'Nov 2025', desc: 'Menikmati angin sore dan obrolan hangat tanpa terburu-buru.', img: '/assets/tri/fotobareng.webp' },
-  { id: 3, title: 'Malam Tutup Tahun', tag: 'Des 2025', desc: 'Menutup tahun dengan rasa syukur karena kamu masih orang yang sama di sisiku.', img: '/assets/tri/photoboothlucu1.webp' },
-  { id: 4, title: 'Awal Tahun Baru', tag: 'Jan 2026', desc: 'Menulis resolusi dan harapan baru untuk terus saling menjaga dan menguatkan.', img: '/assets/tri/mobil.webp' },
-  { id: 5, title: 'Bulan Penuh Hangat', tag: 'Feb 2026', desc: 'Bukan hanya tentang cokelat, tapi tentang kehadiranmu yang selalu menenangkan.', img: '/assets/tri/senyum_hoodie.webp' },
-  { id: 6, title: 'Tawa di Waktu Luang', tag: 'Mar 2026', desc: 'Momen-momen santai di mana kita bisa tertawa lepas membicarakan hal-hal konyol.', img: '/assets/tri/sendirilucu.webp' },
-  { id: 7, title: 'Langkah & Harapan', tag: 'Apr 2026', desc: 'Saling mendukung impian masing-masing dan merayakan setiap pencapaian kecil.', img: '/assets/tri/sicantik1.webp' },
-  { id: 8, title: 'Menjelajah Tempat Baru', tag: 'Mei 2026', desc: 'Menemukan sudut kota baru dan menciptakan memori yang belum pernah ada sebelumnya.', img: '/assets/tri/fotbar2.webp' },
-  { id: 9, title: 'Pertengahan Tahun', tag: 'Jun 2026', desc: 'Menatap sejauh apa kita melangkah dan bersyukur untuk setiap hari yang terlewati.', img: '/assets/tri/sicantik2.webp' },
-  { id: 10, title: 'Hari Penuh Ceria', tag: 'Jul 2026', desc: 'Kebahagiaan sederhana saat melihat senyum manismu di bawah terik matahari.', img: '/assets/tri/photoboothlucu4.webp' },
-  { id: 11, title: 'Ruang Teduh Kita', tag: 'Agu 2026', desc: 'Tempat teraman untuk bercerita tentang lelahnya dunia dan menemukan tenang kembali.', img: '/assets/tri/fotobareng1.webp' },
-  { id: 12, title: 'Menjelang Babak Kedua', tag: 'Sep 2026', desc: 'Mempersiapkan diri menyambut perayaan dua tahun dengan cinta yang kian matang.', img: '/assets/tri/sicantik3.webp' },
-  { id: 13, title: 'Genap Dua Tahun', tag: 'Okt 2026', desc: '730 hari bersama dan cintaku padamu tidak pernah berkurang sedikit pun.', img: '/assets/tri/fotobareng2.webp' },
+  { id: 3, title: 'Tutup Tahun', tag: 'Des 2025', desc: 'Bersyukur karena kamu masih orang yang sama di sisiku.', img: '/assets/tri/photoboothlucu1.webp' },
+  { id: 4, title: 'Awal Tahun Baru', tag: 'Jan 2026', desc: 'Menulis resolusi dan harapan baru untuk terus saling menjaga.', img: '/assets/tri/mobil.webp' },
+  { id: 5, title: 'Bulan Penuh Hangat', tag: 'Feb 2026', desc: 'Kehadiranmu yang selalu menenangkan di setiap hari.', img: '/assets/tri/senyum_hoodie.webp' },
+  { id: 6, title: 'Tawa Lepas', tag: 'Mar 2026', desc: 'Momen santai menertawakan hal konyol bersama.', img: '/assets/tri/sendirilucu.webp' },
+  { id: 7, title: 'Langkah & Harapan', tag: 'Apr 2026', desc: 'Saling mendukung impian dan merayakan setiap pencapaian.', img: '/assets/tri/sicantik1.webp' },
+  { id: 8, title: 'Sudut Kota Baru', tag: 'Mei 2026', desc: 'Menjelajah tempat baru dan mengukir memori berharga.', img: '/assets/tri/fotbar2.webp' },
+  { id: 9, title: 'Pertengahan Tahun', tag: 'Jun 2026', desc: 'Menatap sejauh apa kita melangkah dengan rasa syukur.', img: '/assets/tri/sicantik2.webp' },
+  { id: 10, title: 'Hari Penuh Ceria', tag: 'Jul 2026', desc: 'Kebahagiaan sederhana melihat senyum manismu.', img: '/assets/tri/photoboothlucu4.webp' },
+  { id: 11, title: 'Ruang Teduh Kita', tag: 'Agu 2026', desc: 'Tempat teraman untuk pulang dan menemukan tenang.', img: '/assets/tri/fotobareng1.webp' },
+  { id: 12, title: 'Menjelang Babak Dua', tag: 'Sep 2026', desc: 'Menyambut perayaan dua tahun dengan cinta yang kian matang.', img: '/assets/tri/sicantik3.webp' },
+  { id: 13, title: 'Dua Tahun Abadi', tag: 'Okt 2026', desc: '730 hari bersama dan cintaku padamu kian bertumbuh.', img: '/assets/tri/fotobareng2.webp' },
 ];
 
 export const APPRECIATIONS = [

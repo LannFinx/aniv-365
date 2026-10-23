@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
-import { Sparkles, ArrowRight, Music } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function DocumentOpeningGate({ onUnlock, onComplete }) {
   const [isOpening, setIsOpening] = useState(false);
@@ -23,7 +23,7 @@ export default function DocumentOpeningGate({ onUnlock, onComplete }) {
     resize();
     window.addEventListener('resize', resize);
 
-    const particles = Array.from({ length: 48 }, () => ({
+    const particles = Array.from({ length: 36 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       radius: Math.random() * 1.5 + 0.5,
@@ -117,7 +117,6 @@ export default function DocumentOpeningGate({ onUnlock, onComplete }) {
     .to(centerContentRef.current, {
       opacity: 0,
       y: -35,
-      filter: 'blur(20px)',
       duration: 0.65,
       ease: 'power2.in'
     }, '-=0.1')
@@ -146,7 +145,7 @@ export default function DocumentOpeningGate({ onUnlock, onComplete }) {
 
       <div
         ref={ambientHaloRef}
-        className="absolute w-[400px] sm:w-[700px] h-[400px] sm:h-[700px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-[140px] opacity-35"
+        className="absolute w-[320px] sm:w-[600px] h-[320px] sm:h-[600px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-[80px] sm:blur-[140px] opacity-35"
         style={{
           background: 'radial-gradient(circle at center, rgba(0, 210, 255, 0.25) 0%, rgba(0, 112, 243, 0.15) 45%, transparent 75%)'
         }}
@@ -156,26 +155,22 @@ export default function DocumentOpeningGate({ onUnlock, onComplete }) {
         ref={centerContentRef} 
         className="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center text-center py-8"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-cyan-400/30 text-cyan-300 text-xs tracking-widest uppercase mb-6 backdrop-blur-md shadow-[0_0_20px_rgba(0,210,255,0.15)]">
-          <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-          <span className="font-display font-semibold text-[11px]">
-            Satu Tahun Bersama
+        <div className="flex items-center gap-2 mb-6 sm:mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
+          <span className="font-display font-medium text-white/50 text-xs sm:text-sm tracking-widest uppercase">
+            20.10.2025 — 20.10.2026
           </span>
         </div>
 
-        <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl text-white tracking-[-0.05em] uppercase leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] mb-6">
+        <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white tracking-[-0.05em] uppercase leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] mb-8 sm:mb-12">
           Tri Ayuaningsih
         </h1>
-
-        <p className="font-sans text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-md mx-auto mb-10">
-          Sebuah persembahan kecil untuk 365 hari penuh cinta, tawa, dan cerita yang telah kita lalui bersama.
-        </p>
 
         <button
           ref={triggerBtnRef}
           onClick={handleOpen}
           disabled={isOpening}
-          className="group relative inline-flex items-center gap-3.5 px-8 py-4 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-cyan-400/40 hover:border-cyan-300 text-white transition-all duration-300 backdrop-blur-xl shadow-[0_0_25px_rgba(0,112,243,0.35)] hover:shadow-[0_0_45px_rgba(0,210,255,0.7)] hover:scale-105 active:scale-95 cursor-pointer"
+          className="group relative inline-flex items-center gap-3.5 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-cyan-400/40 hover:border-cyan-300 text-white transition-all duration-300 backdrop-blur-xl shadow-[0_0_30px_rgba(0,112,243,0.3)] hover:shadow-[0_0_45px_rgba(0,210,255,0.6)] hover:scale-105 active:scale-95 cursor-pointer"
           aria-label="Buka Kenangan 365 Hari"
         >
           <div className="absolute inset-0 rounded-full bg-cyan-400/10 blur-md group-hover:bg-cyan-400/25 transition-all" />
@@ -185,11 +180,6 @@ export default function DocumentOpeningGate({ onUnlock, onComplete }) {
           </span>
           <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1.5 transition-transform relative z-10" />
         </button>
-
-        <div className="flex items-center gap-2 text-xs text-slate-400/80 font-sans mt-5">
-          <Music className="w-3.5 h-3.5 text-cyan-400" />
-          <span>Sentuh tombol untuk memulai musik kenangan</span>
-        </div>
       </div>
     </div>
   );

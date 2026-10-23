@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Mail, ChevronUp, X, Sparkles, BookOpen } from 'lucide-react';
+import { Mail, ChevronUp, X, Sparkles, ArrowRight } from 'lucide-react';
 
 const STARDUST_PARTICLES = [
   { top: '16%', left: '12%', size: 'w-1 h-1 sm:w-1.5 sm:h-1.5', delay: '0s', opacity: 'opacity-40' },
@@ -31,7 +31,7 @@ export default function LoveLetterSection({ letterSectionRef }) {
       className="w-full h-screen relative flex flex-col items-center justify-center px-4 overflow-hidden bg-transparent select-none"
     >
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[620px] md:w-[880px] h-[340px] sm:h-[620px] md:h-[880px] pointer-events-none rounded-full"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[620px] md:w-[880px] h-[280px] sm:h-[620px] md:h-[880px] pointer-events-none rounded-full"
         style={{
           background: 'radial-gradient(circle at center, rgba(0, 112, 243, 0.16) 0%, rgba(0, 210, 255, 0.04) 40%, transparent 70%)',
         }}
@@ -51,32 +51,22 @@ export default function LoveLetterSection({ letterSectionRef }) {
       ))}
 
       <div className="letter-chapter-badge absolute top-6 sm:top-8 w-full max-w-6xl mx-auto px-4 flex items-center justify-between text-xs text-white/50 z-30 pointer-events-none">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
-          <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-          <span className="text-white/80 font-display font-medium">Surat Cinta Satu Tahun</span>
-          <span className="text-white/30">·</span>
-          <span className="font-sans">Tri & Ahnaf</span>
+          <span className="text-white/80 font-display font-medium text-xs sm:text-sm tracking-wide">
+            Surat Pribadi
+          </span>
         </div>
-        <div className="font-display text-white/70 tracking-wider">
-          20 OKTOBER 2025
+        <div className="font-display text-white/40 text-xs tracking-widest">
+          20.10.2026
         </div>
       </div>
 
       <div className="relative z-10 w-full max-w-xl flex flex-col items-center">
         <div className={`letter-header-group text-center mb-6 sm:mb-8 transition-all duration-500 ${isOpen ? 'opacity-20 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-cyan-400/30 text-cyan-300 text-xs font-display font-semibold tracking-wider mb-3.5 backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
-            <span>Pesan Rahasia · Tri & Ahnaf</span>
-          </div>
-
-          <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-[-0.03em] uppercase mb-2 drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
+          <h2 className="font-display font-black text-4xl sm:text-6xl md:text-7xl text-white tracking-[-0.04em] uppercase drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
             Surat Untuk Tri
           </h2>
-
-          <p className="font-sans text-xs sm:text-sm text-slate-300 font-light max-w-sm sm:max-w-md mx-auto leading-relaxed">
-            Untaian kata dan rasa syukur terdalam untuk 365 hari penuh cinta yang kita lalui bersama.
-          </p>
         </div>
 
         <div className="letter-envelope-stage relative w-full flex flex-col items-center justify-center min-h-[260px] sm:min-h-[300px]">
@@ -92,22 +82,12 @@ export default function LoveLetterSection({ letterSectionRef }) {
             <div className="absolute bottom-0 left-0 w-44 h-44 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-cyan-300" />
-                </div>
-                <div>
-                  <span className="block font-display font-bold text-xs uppercase tracking-wider text-white">
-                    Memoir Pribadi
-                  </span>
-                  <span className="block font-sans text-[11px] text-slate-400">
-                    Edisi 1st Anniversary
-                  </span>
-                </div>
+              <div className="w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center">
+                <Mail className="w-4 h-4 text-cyan-300" />
               </div>
 
-              <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-display font-medium text-white/60">
-                20.10.2024 — 2025
+              <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-display font-medium text-white/50 tracking-wider">
+                20.10.2025 — 2026
               </div>
             </div>
 
@@ -121,21 +101,17 @@ export default function LoveLetterSection({ letterSectionRef }) {
                 <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-cyan-400 border-2 border-[#050811] shadow-[0_0_8px_#00D2FF]" />
               </div>
 
-              <span className="font-display font-bold text-sm sm:text-base text-white uppercase tracking-tight group-hover:text-cyan-300 transition-colors">
-                Buka Folio Kenangan
-              </span>
-              <span className="font-sans text-[11px] text-slate-400 mt-0.5">
-                Sentuh untuk membuka pesan khusus Tri Ayuaningsih
+              <span className="font-display font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-cyan-300 transition-colors">
+                Buka Folio
               </span>
             </div>
 
-            <div className="relative z-10 flex items-center justify-between pt-3 border-t border-white/10 text-[11px] text-white/50 font-sans">
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
-                <span>Untuk Tri Ayuaningsih</span>
-              </div>
-              <span className="font-display font-medium text-cyan-300 group-hover:translate-x-1 transition-transform">
-                Buka Surat →
+            <div className="relative z-10 flex items-center justify-between pt-3 border-t border-white/10 text-xs text-white/50 font-display">
+              <span className="text-[11px] text-slate-400 tracking-wide">
+                Tri Ayuaningsih
+              </span>
+              <span className="font-medium text-cyan-300 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Baca <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </div>
           </div>
@@ -157,15 +133,12 @@ export default function LoveLetterSection({ letterSectionRef }) {
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
                   <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-cyan-300">
-                    Jakarta · 20 Oktober 2025
+                    Jakarta · 20 Oktober 2026
                   </span>
                 </div>
                 <h3 className="font-display font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">
                   Untuk Tri Ayuaningsih
                 </h3>
-                <span className="text-[11px] text-slate-400 font-sans block mt-0.5">
-                  Perayaan 365 Hari Bersama (Satu Tahun Penuh Cinta)
-                </span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -178,9 +151,6 @@ export default function LoveLetterSection({ letterSectionRef }) {
                       className="w-full h-full object-cover rounded-lg"
                     />
                     <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-6 h-2 bg-cyan-400/50 backdrop-blur-xs -rotate-2 rounded-full" />
-                  </div>
-                  <div className="absolute -bottom-1.5 -left-1.5 px-1.5 py-0.5 rounded-full bg-[#050811] border border-cyan-400/80 text-[8px] font-display font-bold text-cyan-300 shadow-sm">
-                    1ST ANIV
                   </div>
                 </div>
 

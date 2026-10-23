@@ -165,19 +165,14 @@ export default function PerspectiveGridSection({
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl w-full pt-4 sm:pt-6">
         <div className="grid-backdrop-title flex flex-col items-center mb-5 sm:mb-8 z-30">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-cyan-400/30 text-cyan-300 text-xs font-display font-semibold tracking-wider mb-3.5 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-cyan-400/30 text-cyan-300 text-xs font-display font-semibold tracking-wider mb-3 backdrop-blur-md">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
-            <Music className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Soundtrack Kenangan · Tri & Ahnaf</span>
+            <span>Playlist</span>
           </div>
 
-          <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-[-0.03em] uppercase mb-2 drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
-            Melodi Perjalanan Kita
+          <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-[-0.03em] uppercase drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
+            Melodi Perjalanan
           </h2>
-
-          <p className="font-sans text-xs sm:text-sm text-slate-300 font-light max-w-sm sm:max-w-md mx-auto leading-relaxed">
-            Lagu-lagu yang selalu menemani obrolan larut malam, perjalanan pulang, dan setiap momen manis bersama.
-          </p>
         </div>
 
         <div className="appreciations-deck-stage relative w-full max-w-3xl h-[280px] sm:h-[350px] md:h-[390px] flex items-center justify-center [perspective:1200px]">
@@ -425,13 +420,6 @@ export default function PerspectiveGridSection({
               </span>
             </div>
 
-          </div>
-
-          <div className="text-[11px] text-white/40 flex items-center gap-2 font-sans">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
-            <span className="font-display font-medium text-white/70">Daftar Lagu Kenangan</span>
-            <span className="text-white/20">·</span>
-            <span className="text-cyan-400">2024 — 2025</span>
           </div>
         </div>
       </div>

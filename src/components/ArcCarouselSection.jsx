@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sparkles, ArrowRight, ArrowLeft, Maximize2, X } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Maximize2, X } from 'lucide-react';
 import { ARC_MEMORIES } from '../data/memories';
 
 export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, onSelectArc }) {
@@ -52,7 +52,7 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
       className="w-full h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent select-none px-4 sm:px-6 md:px-10"
     >
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[650px] md:w-[850px] h-[340px] sm:h-[650px] md:h-[850px] pointer-events-none rounded-full blur-[150px] opacity-30"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[650px] md:w-[850px] h-[280px] sm:h-[650px] md:h-[850px] pointer-events-none rounded-full blur-[60px] sm:blur-[150px] opacity-30"
         style={{
           background: 'radial-gradient(circle at center, rgba(0, 210, 255, 0.2) 0%, rgba(0, 112, 243, 0.1) 45%, transparent 75%)'
         }}
@@ -62,11 +62,7 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
         <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
           <span className="font-display font-medium text-white/90 text-xs sm:text-sm tracking-wide">
-            Galeri Kenangan Dua Belas Bulan
-          </span>
-          <span className="text-white/30 text-xs">·</span>
-          <span className="font-sans text-white/50 text-xs">
-            Tri & Ahnaf
+            Dua Belas Bulan
           </span>
         </div>
         <div className="flex items-center gap-1.5 font-display font-semibold text-xs tracking-wider text-white/70">
@@ -78,11 +74,9 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
 
       <div className="relative w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-14 z-20">
         <div className="w-full md:w-[42%] flex flex-col justify-center text-left z-30">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-cyan-400/30 text-cyan-300 text-xs font-display font-semibold tracking-wider mb-3.5 w-fit backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-cyan-400/30 text-cyan-300 text-xs font-display font-semibold tracking-wider mb-3.5 w-fit backdrop-blur-md">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
             <span>{currentItem.tag}</span>
-            <span className="text-white/30">·</span>
-            <span className="text-white/70">Bulan ke-{currentIdx + 1}</span>
           </div>
 
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-[-0.03em] uppercase leading-[1.08] mb-3 sm:mb-4 drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
@@ -93,31 +87,29 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
             {currentItem.desc}
           </p>
 
-          <div className="flex items-center flex-wrap gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-6">
             <button
               onClick={handlePrev}
-              className="w-11 h-11 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 hover:border-cyan-400/50 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer group"
-              aria-label="Previous Month"
+              className="w-10 h-10 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 hover:border-cyan-400/50 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer group"
+              aria-label="Sebelumnya"
             >
               <ArrowLeft className="w-4 h-4 text-white/70 group-hover:text-cyan-400 group-hover:-translate-x-0.5 transition-all" />
             </button>
             
             <button
               onClick={handleNext}
-              className="h-11 px-6 rounded-full border border-cyan-400/40 bg-cyan-400/10 hover:bg-cyan-400/20 hover:border-cyan-400 flex items-center gap-2 text-white transition-all shadow-[0_0_20px_rgba(0,210,255,0.25)] cursor-pointer group"
-              aria-label="Next Month"
+              className="w-10 h-10 rounded-full border border-cyan-400/40 bg-cyan-400/10 hover:bg-cyan-400/25 hover:border-cyan-300 flex items-center justify-center text-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.25)] cursor-pointer group"
+              aria-label="Selanjutnya"
             >
-              <span className="text-xs sm:text-sm font-display font-semibold tracking-wide">Momen Selanjutnya</span>
-              <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-0.5 transition-transform" />
             </button>
 
             <button
               onClick={() => setIsModalOpen(true)}
-              className="h-11 px-4 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 hover:border-cyan-400/40 flex items-center gap-2 text-white/70 hover:text-white transition-all text-xs font-display font-medium cursor-pointer"
-              aria-label="Perbesar Foto"
+              className="w-10 h-10 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 hover:border-cyan-400/40 flex items-center justify-center text-white/70 hover:text-white transition-all cursor-pointer"
+              aria-label="Perbesar"
             >
               <Maximize2 className="w-3.5 h-3.5 text-cyan-400" />
-              <span className="hidden sm:inline">Perbesar Foto</span>
             </button>
           </div>
 
@@ -180,33 +172,33 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
                 scale = isMobile ? 1.02 : 1.08;
                 opacity = 1;
                 zIndex = 30;
-              } else if (diff === -1 || (currentIdx === 0 && idx === total - 1)) {
+              } else if (diff === -1) {
                 x = -spacing;
-                z = -30;
+                z = -40;
                 rotateY = 22;
                 scale = 0.88;
-                opacity = 0.65;
+                opacity = 0.6;
                 zIndex = 20;
-              } else if (diff === -2 || (currentIdx === 1 && idx === total - 1)) {
+              } else if (diff === -2) {
                 x = -outerSpacing;
-                z = -90;
-                rotateY = 35;
+                z = -100;
+                rotateY = 32;
                 scale = 0.72;
-                opacity = 0.35;
+                opacity = 0.3;
                 zIndex = 10;
-              } else if (diff === 1 || (currentIdx === total - 1 && idx === 0)) {
+              } else if (diff === 1) {
                 x = spacing;
-                z = -30;
+                z = -40;
                 rotateY = -22;
                 scale = 0.88;
-                opacity = 0.65;
+                opacity = 0.6;
                 zIndex = 20;
-              } else if (diff === 2 || (currentIdx === total - 2 && idx === 0)) {
+              } else if (diff === 2) {
                 x = outerSpacing;
-                z = -90;
-                rotateY = -35;
+                z = -100;
+                rotateY = -32;
                 scale = 0.72;
-                opacity = 0.35;
+                opacity = 0.3;
                 zIndex = 10;
               } else {
                 opacity = 0;
@@ -221,22 +213,21 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
                     transform: `translate3d(${x}px, 0, ${z}px) rotateY(${rotateY}deg) scale(${scale})`,
                     zIndex,
                     opacity,
-                    transition: 'all 0.55s cubic-bezier(0.16, 1, 0.3, 1)',
+                    transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
                   }}
                   className="absolute cursor-pointer will-change-transform"
                 >
-                  <div className={`w-44 h-64 sm:w-56 sm:h-80 md:w-68 md:h-[390px] rounded-2xl overflow-hidden p-1.5 bg-[#050811] border transition-all duration-300 ${
+                  <div className={`relative w-44 h-60 sm:w-56 sm:h-76 md:w-64 md:h-88 rounded-2xl sm:rounded-3xl p-1.5 sm:p-2 bg-[#050811] border transition-all duration-300 ${
                     isCenter 
-                      ? 'border-cyan-400/60 shadow-[0_20px_50px_rgba(0,0,0,0.95),0_0_40px_rgba(0,210,255,0.3)] ring-1 ring-cyan-300/30' 
-                      : 'border-white/10 hover:border-white/30 shadow-2xl'
+                      ? 'border-cyan-400/60 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_40px_rgba(0,210,255,0.3)] ring-1 ring-cyan-300/30' 
+                      : 'border-white/10 hover:border-white/25 shadow-2xl'
                   }`}>
-                    <div className="w-full h-full rounded-xl overflow-hidden relative bg-black">
+                    <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden bg-black">
                       <img 
                         src={item.img} 
-                        alt={item.title} 
-                        className={`w-full h-full object-cover transition-all duration-500 ${
-                          isCenter ? 'contrast-105 brightness-100' : 'grayscale-[40%] contrast-95 brightness-75'
-                        }`}
+                        alt={item.title}
+                        decoding="async"
+                        className="w-full h-full object-cover filter contrast-[1.06] brightness-95"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-3.5 sm:p-4 text-left">
                         <span className="text-[10px] sm:text-xs font-display font-semibold text-cyan-300 uppercase tracking-wider">
@@ -276,6 +267,7 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
               <img 
                 src={currentItem.img} 
                 alt={currentItem.title}
+                decoding="async"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -284,8 +276,6 @@ export default function ArcCarouselSection({ arcSectionRef, activeArcIdx = 0, on
               <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/5 border border-cyan-400/30 text-cyan-300 text-xs font-display font-semibold tracking-wider mb-2 w-fit">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00D2FF]" />
                 <span>{currentItem.tag}</span>
-                <span className="text-white/30">·</span>
-                <span className="text-white/70">Bulan ke-{currentIdx + 1}</span>
               </div>
               <h3 className="font-display font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mb-2">
                 {currentItem.title}
