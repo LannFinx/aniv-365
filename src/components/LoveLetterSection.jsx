@@ -172,8 +172,9 @@ export default function LoveLetterSection({ letterSectionRef }) {
                 <div className="relative flex-shrink-0">
                   <div className="w-[66px] h-[82px] sm:w-[74px] sm:h-[92px] rounded-xl bg-black/60 border border-cyan-400/50 p-1 rotate-2 shadow-lg overflow-hidden relative group">
                     <img 
-                      src="/assets/tri/senyum_hoodie.jpeg" 
+                      src="/assets/tri/senyum_hoodie.webp" 
                       alt="Tri Ayuaningsih" 
+                      decoding="async"
                       className="w-full h-full object-cover rounded-lg"
                     />
                     <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-6 h-2 bg-cyan-400/50 backdrop-blur-xs -rotate-2 rounded-full" />

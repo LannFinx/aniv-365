@@ -12,7 +12,7 @@ export default function FinaleSection({ finaleSectionRef }) {
       className="w-full min-h-screen relative flex flex-col items-center justify-between py-12 sm:py-16 px-4 text-center overflow-hidden bg-transparent select-none"
     >
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[680px] md:w-[960px] h-[340px] sm:h-[680px] md:h-[960px] pointer-events-none rounded-full blur-[140px] opacity-40"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[680px] md:w-[960px] h-[280px] sm:h-[680px] md:h-[960px] pointer-events-none rounded-full blur-[60px] sm:blur-[140px] opacity-40"
         style={{
           background: 'radial-gradient(circle at center, rgba(0, 112, 243, 0.35) 0%, rgba(0, 210, 255, 0.15) 40%, transparent 75%)'
         }}
@@ -46,8 +46,9 @@ export default function FinaleSection({ finaleSectionRef }) {
 
         <div className="relative w-full max-w-md h-52 sm:h-64 rounded-3xl overflow-hidden border border-cyan-400/40 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_50px_rgba(0,112,243,0.3)] mb-8 group bg-[#050811]">
           <img 
-            src="/assets/tri/fotobareng2.jpeg" 
+            src="/assets/tri/fotobareng2.webp" 
             alt="Tri Ayuaningsih & Ahnaf" 
+            decoding="async"
             className="w-full h-full object-cover filter contrast-[1.05] brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5 text-left">

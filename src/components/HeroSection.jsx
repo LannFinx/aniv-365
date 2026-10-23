@@ -7,14 +7,14 @@ export default function HeroSection({ heroRef, heroContentRef }) {
       className="w-full h-screen relative flex flex-col items-center justify-between overflow-hidden px-4 sm:px-8 pt-6 pb-6 select-none bg-transparent"
     >
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[650px] md:w-[850px] h-[340px] sm:h-[650px] md:h-[850px] pointer-events-none rounded-full blur-[140px] opacity-35 will-change-transform"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[650px] md:w-[850px] h-[280px] sm:h-[650px] md:h-[850px] pointer-events-none rounded-full blur-[60px] sm:blur-[140px] opacity-35 will-change-transform"
         style={{
           background: 'radial-gradient(circle at center, rgba(0, 210, 255, 0.22) 0%, rgba(0, 112, 243, 0.12) 40%, transparent 75%)'
         }}
       />
 
       <div 
-        className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] pointer-events-none rounded-full blur-3xl opacity-30"
+        className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] sm:w-[500px] h-[240px] sm:h-[500px] pointer-events-none rounded-full blur-xl sm:blur-3xl opacity-30"
         style={{
           background: 'radial-gradient(circle at center, rgba(255, 255, 255, 0.25) 0%, rgba(0, 210, 255, 0.16) 40%, transparent 70%)'
         }}
@@ -54,8 +54,9 @@ export default function HeroSection({ heroRef, heroContentRef }) {
             }}
           >
             <img 
-              src="/assets/tri/transparan_ahnaftri.png" 
+              src="/assets/tri/transparan_ahnaftri.webp" 
               alt="Tri & Ahnaf" 
+              decoding="async"
               className="h-full w-auto max-w-[90vw] object-contain object-bottom filter contrast-[1.12] brightness-[0.98] drop-shadow-[0_10px_40px_rgba(0,0,0,0.8)]"
             />
           </div>

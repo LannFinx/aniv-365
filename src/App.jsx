@@ -142,11 +142,12 @@ export default function App() {
   const finaleSectionRef = useRef(null);
 
   useEffect(() => {
+    const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
     const lenis = new Lenis({
-      duration: 1.3,
+      duration: isTouch ? 1.0 : 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      touchMultiplier: 1.4,
+      touchMultiplier: 1.0,
     });
 
     lenisInstanceRef.current = lenis;
@@ -174,7 +175,6 @@ export default function App() {
             scale: 1 + progress * 0.9,
             y: -progress * 60,
             opacity: Math.max(0, 1 - progress * 1.4),
-            filter: `blur(${progress * 22}px)`,
             duration: 0.1,
             overwrite: 'auto',
           });
@@ -182,7 +182,6 @@ export default function App() {
             scale: 1 + progress * 0.28,
             y: -progress * 40,
             opacity: Math.max(0, 1 - progress * 1.3),
-            filter: `blur(${progress * 12}px)`,
             duration: 0.1,
             overwrite: 'auto',
           });
@@ -230,25 +229,22 @@ export default function App() {
             .to({}, { duration: 1 })
             .to(card, {
               opacity: 0,
-              scale: 1.08,
+              scale: 1.06,
               y: -25,
-              filter: 'blur(12px)',
               pointerEvents: 'none',
               duration: 0.8,
             });
         } else {
           journeyTimeline
             .fromTo(card,
-              { opacity: 0, scale: 0.92, y: 35, filter: 'blur(12px)', pointerEvents: 'none' },
-              { opacity: 1, scale: 1, y: 0, filter: 'blur(0px)', clearProps: 'filter', pointerEvents: 'auto', duration: 0.8 }
+              { opacity: 0, scale: 0.94, y: 30, pointerEvents: 'none' },
+              { opacity: 1, scale: 1, y: 0, pointerEvents: 'auto', duration: 0.8 }
             )
             .to({}, { duration: 1 })
             .to(card, {
               opacity: i === chapterCards.length - 1 ? 1 : 0,
-              scale: i === chapterCards.length - 1 ? 1 : 1.08,
+              scale: i === chapterCards.length - 1 ? 1 : 1.06,
               y: i === chapterCards.length - 1 ? 0 : -25,
-              filter: i === chapterCards.length - 1 ? 'blur(0px)' : 'blur(12px)',
-              clearProps: i === chapterCards.length - 1 ? 'filter' : '',
               pointerEvents: i === chapterCards.length - 1 ? 'auto' : 'none',
               duration: 0.8,
             });
@@ -285,36 +281,34 @@ export default function App() {
       gridTl
         .fromTo(
           '.perspective-grid-floor',
-          { opacity: 0, y: 70, scale: 0.88, filter: 'blur(10px)' },
-          { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', clearProps: 'filter', duration: 0.5, ease: 'power2.out' }
+          { opacity: 0, y: 60, scale: 0.9 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: 'power2.out' }
         )
         .fromTo(
           '.perspective-ground-reflection',
-          { opacity: 0, scale: 0.5 },
+          { opacity: 0, scale: 0.6 },
           { opacity: 1, scale: 1, duration: 0.45, ease: 'power2.out' },
           '-=0.4'
         )
         .fromTo(
           '.grid-backdrop-title',
-          { opacity: 0, y: -20, scale: 0.9, filter: 'blur(16px)' },
-          { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', clearProps: 'filter', duration: 0.45, ease: 'power3.out' },
+          { opacity: 0, y: -20, scale: 0.92 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'power3.out' },
           '-=0.35'
         )
         .fromTo(
           '.appreciations-deck-stage',
-          { opacity: 0, y: 50, scale: 0.9, filter: 'blur(16px)' },
-          { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', clearProps: 'filter', duration: 0.6, ease: 'power3.out' },
+          { opacity: 0, y: 40, scale: 0.92 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' },
           '-=0.3'
         )
         .fromTo(
           '.spotify-player-dock',
-          { opacity: 0, y: 35, filter: 'blur(10px)' },
-          { opacity: 1, y: 0, filter: 'blur(0px)', clearProps: 'filter', duration: 0.5, ease: 'power2.out' },
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
           '-=0.35'
         )
         .to({}, { duration: 1.5 });
-
-
 
       const letterTl = gsap.timeline({
         scrollTrigger: {
@@ -329,19 +323,19 @@ export default function App() {
       letterTl
         .fromTo(
           '.letter-chapter-badge',
-          { opacity: 0, y: -20, filter: 'blur(10px)' },
-          { opacity: 1, y: 0, filter: 'blur(0px)', clearProps: 'filter', duration: 0.4 }
+          { opacity: 0, y: -20 },
+          { opacity: 1, y: 0, duration: 0.4 }
         )
         .fromTo(
           '.letter-header-group',
-          { opacity: 0, scale: 0.9, filter: 'blur(16px)', y: 25 },
-          { opacity: 1, scale: 1, filter: 'blur(0px)', clearProps: 'filter', y: 0, duration: 0.6 },
+          { opacity: 0, scale: 0.92, y: 20 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.6 },
           '-=0.2'
         )
         .fromTo(
           '.letter-envelope-stage',
-          { opacity: 0, scale: 0.88, filter: 'blur(16px)', y: 35 },
-          { opacity: 1, scale: 1, filter: 'blur(0px)', clearProps: 'filter', y: 0, duration: 0.8 },
+          { opacity: 0, scale: 0.9, y: 30 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.8 },
           '-=0.3'
         )
         .to({}, { duration: 2 });
@@ -353,44 +347,46 @@ export default function App() {
         onEnter: () => {
           gsap.fromTo(
             '.finale-card',
-            { opacity: 0, scale: 0.85, filter: 'blur(18px)', y: 40 },
-            { opacity: 1, scale: 1, filter: 'blur(0px)', y: 0, duration: 1, ease: 'power3.out' }
+            { opacity: 0, scale: 0.9, y: 35 },
+            { opacity: 1, scale: 1, y: 0, duration: 0.9, ease: 'power3.out' }
           );
         },
       });
 
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 768px)", () => {
+        gsap.to('.memory-track-far', {
+          yPercent: -28,
+          ease: 'none',
+          scrollTrigger: {
+            start: 0,
+            end: 'max',
+            scrub: 1.5,
+            invalidateOnRefresh: true,
+          },
+        });
 
-      gsap.to('.memory-track-far', {
-        yPercent: -28,
-        ease: 'none',
-        scrollTrigger: {
-          start: 0,
-          end: 'max',
-          scrub: 1.5,
-          invalidateOnRefresh: true,
-        },
-      });
+        gsap.to('.memory-track-mid', {
+          yPercent: -45,
+          ease: 'none',
+          scrollTrigger: {
+            start: 0,
+            end: 'max',
+            scrub: 1.2,
+            invalidateOnRefresh: true,
+          },
+        });
 
-      gsap.to('.memory-track-mid', {
-        yPercent: -45,
-        ease: 'none',
-        scrollTrigger: {
-          start: 0,
-          end: 'max',
-          scrub: 1.2,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      gsap.to('.memory-track-near', {
-        yPercent: -65,
-        ease: 'none',
-        scrollTrigger: {
-          start: 0,
-          end: 'max',
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
+        gsap.to('.memory-track-near', {
+          yPercent: -65,
+          ease: 'none',
+          scrollTrigger: {
+            start: 0,
+            end: 'max',
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        });
       });
     }, mainContainerRef);
 

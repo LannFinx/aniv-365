@@ -213,11 +213,26 @@
   - Mengharmoniskan teks penutup: `Dibuat dengan segenap cinta oleh Ahnaf untuk Tri Ayuaningsih · 20 Oktober 2024 — Selamanya`.
   - Terverifikasi via browser subagent: transisi masuk mulus 60 FPS, tata letak proporsional, dan interaksi *smooth scroll-to-top* berfungsi sempurna.
 - [x] **Task 17.7 (Fase 7): Pembersihan Latar Belakang & Audio Toggle (`ParallaxMemoryVoid.jsx` & `AudioToggle.jsx`):** [SELESAI - TAHAP AKHIR HERO-ALIGNED OVERHAUL]
-  - Mengeliminasi seluruh sisa garis CAD putus-putus kaku dan kode teknis Yunani (`α ·`, `β ·`, dll.) yang berbau cyber/robotik.
-  - Mengubah penanda kartu foto latar belakang menjadi nama momen romantis hangat berbalut tipografi geometris `Outfit` dan titik pendar cyan (*cyan beacon dot*).
-  - Menyederhanakan tombol audio di sudut kanan atas menjadi **Dynamic 4-Bar Equalizer Pill** modern (`#050811/85 backdrop-blur-xl`) dengan 4 batang frekuensi equalizer animasi responsif dan label `AUDIO ON / AUDIO OFF`.
-  - Terverifikasi via browser subagent: visual latar belakang mengalir organik dengan partikel stardust lembut, tanpa jank performa, dan konsisten 100% dengan estetika Hero Section.
 
+---
 
+## 📍 Rincian Task Mobile Performance & WebP Optimization (Task 18)
 
-
+### ✅ TASK 18: Optimasi Kinerja Ponsel (Mobile 60 FPS) & Kompresi Aset WebP [COMPLETED]
+- [x] **Task 18.1: Skrip Konversi & Kompresi WebP Lokal (`execution/convert_to_webp.py`):** [COMPLETED]
+  - Mengeksekusi kompresi cerdas offline menggunakan pustaka Python Pillow pada seluruh gambar di `public/assets/tri/`.
+  - Berhasil mereduksi ukuran total aset dari **31.04 MB menjadi hanya 2.70 MB (hemat 91.3%)** dengan kualitas visual tajam tanpa kompromi.
+  - Subjek utama `transparan_ahnaftri` terkompresi dari 2.78 MB menjadi 211 KB (-92.4%) dengan transparansi alpha sempurna.
+- [x] **Task 18.2: Pembaruan Referensi File Gambar di Seluruh Proyek:** [COMPLETED]
+  - Memperbarui seluruh pemetaan gambar di `src/data/memories.js`, `HeroSection.jsx`, `FinaleSection.jsx`, `LoveLetterSection.jsx`, dan `ParallaxMemoryVoid.jsx` menjadi format `.webp`.
+  - Menambahkan atribut `decoding="async"` pada elemen gambar untuk mencegah jank rendering.
+- [x] **Task 18.3: Eliminasi Beban GPU Filter Blur saat Scroll Aktif:** [COMPLETED]
+  - Menghapus animasi `filter: blur(...)` real-time pada event scroll GSAP di `src/App.jsx`.
+  - Transisi scroll kini mengandalkan murni akselerasi hardware GPU (`opacity` & `transform: scale/translate3d`).
+- [x] **Task 18.4: Penyesuaian Responsif Layar Ponsel & Lenis Touch:** [COMPLETED]
+  - Mengisolasi kalkulasi parallax track 3-lapis di `ParallaxMemoryVoid.jsx` hanya untuk desktop (`md:`), sehingga ponsel tidak terbebani rendering 21 foto bergerak di balik kartu konten.
+  - Menyesuaikan radius blur lingkaran pendar menjadi adaptif (`blur-[50px] sm:blur-[140px]`).
+  - Menyelaraskan setting Lenis `touchMultiplier: 1.0` untuk scroll layar sentuh yang natural dan bebas jitter.
+- [x] **Task 18.5: Verifikasi Build & Browser Testing:** [COMPLETED]
+  - Build produksi lolos sempurna (`vite build` sukses dalam 16.48s).
+  - Verifikasi browser subagent mengonfirmasi interaksi lancar, visual jernih, dan console 100% bebas error.

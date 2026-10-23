@@ -32,33 +32,33 @@ const AMBIENT_STARS = [
 ];
 
 const FAR_PHOTOS = [
-  { src: '/assets/tri/fotobareng.jpeg', top: '4%', left: '6%', size: 'w-32 sm:w-44', rotate: '-6deg', tag: 'Awal Cerita', xPercent: 12, yPercent: 4 },
-  { src: '/assets/tri/sicantik1.jpeg', top: '16%', right: '7%', size: 'w-28 sm:w-40', rotate: '8deg', tag: 'Pesona Indah', xPercent: 88, yPercent: 16 },
-  { src: '/assets/tri/wisudasmk1.jpeg', top: '30%', left: '7%', size: 'w-32 sm:w-44', rotate: '-5deg', tag: 'Hari Bangga', xPercent: 13, yPercent: 30 },
-  { src: '/assets/tri/photoboothlucu3.jpeg', top: '45%', right: '6%', size: 'w-28 sm:w-40', rotate: '6deg', tag: 'Tawa Lepas', xPercent: 89, yPercent: 45 },
-  { src: '/assets/tri/fotbar2.jpeg', top: '60%', left: '6%', size: 'w-32 sm:w-44', rotate: '-7deg', tag: 'Tempat Pulang', xPercent: 12, yPercent: 60 },
-  { src: '/assets/tri/sicantik3.jpeg', top: '75%', right: '7%', size: 'w-28 sm:w-40', rotate: '5deg', tag: 'Jiwa Teduh', xPercent: 88, yPercent: 75 },
-  { src: '/assets/tri/wisudasmk4.jpeg', top: '90%', left: '6%', size: 'w-32 sm:w-44', rotate: '-6deg', tag: 'Langkah Maju', xPercent: 12, yPercent: 90 },
-  { src: '/assets/tri/photoboothlucu4.jpeg', top: '105%', right: '6%', size: 'w-30 sm:w-42', rotate: '7deg', tag: 'Polos Ceria', xPercent: 89, yPercent: 105 },
+  { src: '/assets/tri/fotobareng.webp', top: '4%', left: '6%', size: 'w-32 sm:w-44', rotate: '-6deg', tag: 'Awal Cerita', xPercent: 12, yPercent: 4 },
+  { src: '/assets/tri/sicantik1.webp', top: '16%', right: '7%', size: 'w-28 sm:w-40', rotate: '8deg', tag: 'Pesona Indah', xPercent: 88, yPercent: 16 },
+  { src: '/assets/tri/wisudasmk1.webp', top: '30%', left: '7%', size: 'w-32 sm:w-44', rotate: '-5deg', tag: 'Hari Bangga', xPercent: 13, yPercent: 30 },
+  { src: '/assets/tri/photoboothlucu3.webp', top: '45%', right: '6%', size: 'w-28 sm:w-40', rotate: '6deg', tag: 'Tawa Lepas', xPercent: 89, yPercent: 45 },
+  { src: '/assets/tri/fotbar2.webp', top: '60%', left: '6%', size: 'w-32 sm:w-44', rotate: '-7deg', tag: 'Tempat Pulang', xPercent: 12, yPercent: 60 },
+  { src: '/assets/tri/sicantik3.webp', top: '75%', right: '7%', size: 'w-28 sm:w-40', rotate: '5deg', tag: 'Jiwa Teduh', xPercent: 88, yPercent: 75 },
+  { src: '/assets/tri/wisudasmk4.webp', top: '90%', left: '6%', size: 'w-32 sm:w-44', rotate: '-6deg', tag: 'Langkah Maju', xPercent: 12, yPercent: 90 },
+  { src: '/assets/tri/photoboothlucu4.webp', top: '105%', right: '6%', size: 'w-30 sm:w-42', rotate: '7deg', tag: 'Polos Ceria', xPercent: 89, yPercent: 105 },
 ];
 
 const MID_PHOTOS = [
-  { src: '/assets/tri/mobil.jpeg', top: '8%', right: '9%', size: 'w-40 sm:w-56', rotate: '5deg', tag: 'Night Drive', xPercent: 86, yPercent: 8 },
-  { src: '/assets/tri/senyum_hoodie.jpeg', top: '22%', left: '6%', size: 'w-36 sm:w-52', rotate: '-6deg', tag: 'Senyum Manis', xPercent: 14, yPercent: 22 },
-  { src: '/assets/tri/photoboothlucu1.jpeg', top: '38%', right: '8%', size: 'w-40 sm:w-56', rotate: '6deg', tag: 'Booth Cerita', xPercent: 87, yPercent: 38 },
-  { src: '/assets/tri/sicantik2.jpeg', top: '52%', left: '5%', size: 'w-36 sm:w-52', rotate: '-5deg', tag: 'Kehangatan', xPercent: 13, yPercent: 52 },
-  { src: '/assets/tri/wisudasmk3.jpeg', top: '68%', right: '8%', size: 'w-40 sm:w-56', rotate: '5deg', tag: 'Dukungan Abadi', xPercent: 87, yPercent: 68 },
-  { src: '/assets/tri/sendirilucu.jpeg', top: '82%', left: '6%', size: 'w-36 sm:w-52', rotate: '-7deg', tag: 'Pure Joy', xPercent: 14, yPercent: 82 },
-  { src: '/assets/tri/wisudasmk5.jpeg', top: '98%', right: '7%', size: 'w-40 sm:w-56', rotate: '6deg', tag: 'Momen Juara', xPercent: 88, yPercent: 98 },
-  { src: '/assets/tri/fotobareng2.jpeg', top: '112%', left: '5%', size: 'w-38 sm:w-54', rotate: '-5deg', tag: 'Masa Depan', xPercent: 13, yPercent: 112 },
+  { src: '/assets/tri/mobil.webp', top: '8%', right: '9%', size: 'w-40 sm:w-56', rotate: '5deg', tag: 'Night Drive', xPercent: 86, yPercent: 8 },
+  { src: '/assets/tri/senyum_hoodie.webp', top: '22%', left: '6%', size: 'w-36 sm:w-52', rotate: '-6deg', tag: 'Senyum Manis', xPercent: 14, yPercent: 22 },
+  { src: '/assets/tri/photoboothlucu1.webp', top: '38%', right: '8%', size: 'w-40 sm:w-56', rotate: '6deg', tag: 'Booth Cerita', xPercent: 87, yPercent: 38 },
+  { src: '/assets/tri/sicantik2.webp', top: '52%', left: '5%', size: 'w-36 sm:w-52', rotate: '-5deg', tag: 'Kehangatan', xPercent: 13, yPercent: 52 },
+  { src: '/assets/tri/wisudasmk3.webp', top: '68%', right: '8%', size: 'w-40 sm:w-56', rotate: '5deg', tag: 'Dukungan Abadi', xPercent: 87, yPercent: 68 },
+  { src: '/assets/tri/sendirilucu.webp', top: '82%', left: '6%', size: 'w-36 sm:w-52', rotate: '-7deg', tag: 'Pure Joy', xPercent: 14, yPercent: 82 },
+  { src: '/assets/tri/wisudasmk5.webp', top: '98%', right: '7%', size: 'w-40 sm:w-56', rotate: '6deg', tag: 'Momen Juara', xPercent: 88, yPercent: 98 },
+  { src: '/assets/tri/fotobareng2.webp', top: '112%', left: '5%', size: 'w-38 sm:w-54', rotate: '-5deg', tag: 'Masa Depan', xPercent: 13, yPercent: 112 },
 ];
 
 const NEAR_PHOTOS = [
-  { src: '/assets/tri/fotobareng1.jpeg', top: '12%', left: '10%', size: 'w-48 sm:w-68', rotate: '-4deg', tag: 'Hangat Berdua', xPercent: 18, yPercent: 12 },
-  { src: '/assets/tri/koing.jpeg', top: '32%', right: '10%', size: 'w-44 sm:w-64', rotate: '5deg', tag: 'Sweet Comfort', xPercent: 82, yPercent: 32 },
-  { src: '/assets/tri/photoboothlucu2.jpeg', top: '55%', left: '9%', size: 'w-48 sm:w-68', rotate: '-5deg', tag: 'Unfiltered Laughs', xPercent: 17, yPercent: 55 },
-  { src: '/assets/tri/wisudasmk2.jpeg', top: '78%', right: '9%', size: 'w-44 sm:w-64', rotate: '4deg', tag: 'Proud of You', xPercent: 83, yPercent: 78 },
-  { src: '/assets/tri/sicantik5.jpeg', top: '102%', left: '10%', size: 'w-48 sm:w-68', rotate: '-6deg', tag: 'Sinar Hati', xPercent: 18, yPercent: 102 },
+  { src: '/assets/tri/fotobareng1.webp', top: '12%', left: '10%', size: 'w-48 sm:w-68', rotate: '-4deg', tag: 'Hangat Berdua', xPercent: 18, yPercent: 12 },
+  { src: '/assets/tri/koing.webp', top: '32%', right: '10%', size: 'w-44 sm:w-64', rotate: '5deg', tag: 'Sweet Comfort', xPercent: 82, yPercent: 32 },
+  { src: '/assets/tri/photoboothlucu2.webp', top: '55%', left: '9%', size: 'w-48 sm:w-68', rotate: '-5deg', tag: 'Unfiltered Laughs', xPercent: 17, yPercent: 55 },
+  { src: '/assets/tri/wisudasmk2.webp', top: '78%', right: '9%', size: 'w-44 sm:w-64', rotate: '4deg', tag: 'Proud of You', xPercent: 83, yPercent: 78 },
+  { src: '/assets/tri/sicantik5.webp', top: '102%', left: '10%', size: 'w-48 sm:w-68', rotate: '-6deg', tag: 'Sinar Hati', xPercent: 18, yPercent: 102 },
 ];
 
 export default function ParallaxMemoryVoid() {
@@ -89,7 +89,7 @@ export default function ParallaxMemoryVoid() {
         ))}
       </div>
 
-      <div className="memory-track-far absolute inset-x-0 top-0 h-[400vh] will-change-transform opacity-40">
+      <div className="memory-track-far hidden md:block absolute inset-x-0 top-0 h-[400vh] will-change-transform opacity-40">
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
           {FAR_PHOTOS.map((item, idx) => {
             if (idx === FAR_PHOTOS.length - 1) return null;
@@ -118,7 +118,7 @@ export default function ParallaxMemoryVoid() {
               left: item.left,
               right: item.right,
               transform: `rotate(${item.rotate})`,
-              filter: 'grayscale(75%) contrast(1.1) brightness(0.8) blur(2px)',
+              filter: 'grayscale(75%) contrast(1.1) brightness(0.8)',
               WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 45%, transparent 80%)',
               maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 45%, transparent 80%)',
             }}
@@ -137,7 +137,7 @@ export default function ParallaxMemoryVoid() {
         ))}
       </div>
 
-      <div className="memory-track-mid absolute inset-x-0 top-0 h-[480vh] will-change-transform opacity-55">
+      <div className="memory-track-mid hidden md:block absolute inset-x-0 top-0 h-[480vh] will-change-transform opacity-55">
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
           {MID_PHOTOS.map((item, idx) => {
             if (idx === MID_PHOTOS.length - 1) return null;
@@ -166,7 +166,7 @@ export default function ParallaxMemoryVoid() {
               left: item.left,
               right: item.right,
               transform: `rotate(${item.rotate})`,
-              filter: 'grayscale(55%) contrast(1.15) brightness(0.85) blur(1.2px)',
+              filter: 'grayscale(55%) contrast(1.15) brightness(0.85)',
               WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 48%, transparent 82%)',
               maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 48%, transparent 82%)',
             }}
@@ -185,7 +185,7 @@ export default function ParallaxMemoryVoid() {
         ))}
       </div>
 
-      <div className="memory-track-near absolute inset-x-0 top-0 h-[560vh] will-change-transform opacity-50">
+      <div className="memory-track-near hidden md:block absolute inset-x-0 top-0 h-[560vh] will-change-transform opacity-50">
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
           {NEAR_PHOTOS.map((item, idx) => {
             if (idx === NEAR_PHOTOS.length - 1) return null;
@@ -214,7 +214,7 @@ export default function ParallaxMemoryVoid() {
               left: item.left,
               right: item.right,
               transform: `rotate(${item.rotate})`,
-              filter: 'grayscale(35%) contrast(1.2) brightness(0.9) blur(0.6px)',
+              filter: 'grayscale(35%) contrast(1.2) brightness(0.9)',
               WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 50%, transparent 85%)',
               maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 50%, transparent 85%)',
             }}
